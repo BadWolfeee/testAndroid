@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/one"
+        android:title="Multiplayer Standard" />
+
+    <item
+        android:id="@+id/two"
+        android:title="Single Standard"/>
+
+    <item
+        android:id="@+id/three"
+        android:title="Multiplayer x3"/>
+
+    <item
+        android:id="@+id/four"
+        android:title="Single x3"/>
+
+</menu>

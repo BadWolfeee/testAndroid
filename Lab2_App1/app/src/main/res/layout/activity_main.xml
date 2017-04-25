@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pl.pollub.lab2_app1.MainActivity">
+    tools:context="pl.pollub.lab2_app1.MainActivity"
+    android:background="#BFC9CA">
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,7 +17,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Label"
+            android:hint="Sum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/TextView"
@@ -27,8 +28,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="44dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -38,8 +38,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Number"
+                android:hint="Number"
                 android:ems="10"
                 android:id="@+id/editText4"
                 android:layout_weight="1" />
@@ -47,8 +46,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Number"
+                android:hint="Number"
                 android:ems="10"
                 android:id="@+id/editText3"
                 android:layout_weight="1" />
@@ -59,8 +57,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="101dp"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="101dp">
 
         <LinearLayout
             android:orientation="horizontal"
