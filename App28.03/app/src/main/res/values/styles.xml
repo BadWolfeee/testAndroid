@@ -8,7 +8,7 @@
 
 
     <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">#eac24d</item>
+        <item name="android:popupBackground">#efebe9</item>
     </style>
 
 </resources>

@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
     Button gam,opt,ex;
     private static final int REQUEST_CODE = 1;
-    Intent intent, about;
+    Intent intent, about, intent2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 
     public void onGame(View view) {
             intent = new Intent(this, Game.class);
+            intent2 = new Intent(this, CoinFlip.class);
 
             //Creating the instance of PopupMenu
         PopupMenu popupMenu = new PopupMenu(MainActivity.this, gam);
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
                     startActivity(intent);
                     return true;
                 case R.id.two:
+                    startActivity(intent2);
                     Toast.makeText(getApplicationContext(), "Single Standard", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.three:
@@ -53,8 +55,6 @@ public class MainActivity extends Activity {
         }
     });
         popupMenu.show();
-         // Intent intent = new Intent(this, Game.class);
-        //  startActivity(intent);
         }
 
 

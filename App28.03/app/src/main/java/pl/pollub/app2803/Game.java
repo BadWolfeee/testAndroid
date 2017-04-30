@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.content.Intent;
 
 public class Game extends Activity {
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
     int turn;
     boolean win=false, dro=false;
+    private GameLogics logics = new GameLogics();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,43 +49,23 @@ public class Game extends Activity {
                 else if(rk.getText().toString().equals(" ") && turn == 2 && !win && !dro ){
                     turn=1;
                     rk.setText("X");}
-                endGame();
+                logics.endGame(b1,b2,b3,b4,b5,b6,b7,b8,b9);
+                dro = logics.dro;
+                win = logics.win;
+
+                promptWin();
             }
         });
     }
 
-    public void endGame(){
+    private void promptWin() {
 
-        String a,b,c,d,e,f,g,h,i;
-
-        a=b1.getText().toString();
-        b=b2.getText().toString();
-        c=b3.getText().toString();
-
-        d=b4.getText().toString();
-        e=b5.getText().toString();
-        f=b6.getText().toString();
-
-        g=b7.getText().toString();
-        h=b8.getText().toString();
-        i=b9.getText().toString();
-
-        if(a.equals(b) && a.equals(c) && !a.equals(" ") || d.equals(e) && d.equals(f) && !d.equals(" ")  || g.equals(h) && g.equals(i) && !g.equals(" ")  )
-            win=true;
-        else if(a.equals(d) && a.equals(g) && !a.equals(" ")  || b.equals(e) && b.equals(h) && !b.equals(" ")  || c.equals(f) && c.equals(i) && !c.equals(" ")  )
-            win=true;
-        else if(a.equals(e) && a.equals(i) && !a.equals(" ")  || c.equals(e) && c.equals(g) && !c.equals(" ")  )
-            win=true;
-        else if(!win && !a.equals(" ") && !b.equals(" ") && !c.equals(" ") && !d.equals(" ") && !e.equals(" ") && !f.equals(" ") && !g.equals(" ") && !h.equals(" ") && !i.equals(" "))
-            dro=true;
-
-        if(turn == 2 && win)
-            Toast.makeText(this, "Player O won", Toast.LENGTH_LONG ).show();
+        if (turn == 2 && win)
+            Toast.makeText(this, "Player O won", Toast.LENGTH_LONG).show();
         else if (turn == 1 && win)
-            Toast.makeText(this, "Player X won", Toast.LENGTH_LONG ).show();
-        else if(dro)
-            Toast.makeText(this, "It's a draw", Toast.LENGTH_LONG ).show();
-
+            Toast.makeText(this, "Player X won", Toast.LENGTH_LONG).show();
+        else if (dro)
+            Toast.makeText(this, "It's a draw", Toast.LENGTH_LONG).show();
     }
 
 }
