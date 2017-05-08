@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/one"
@@ -11,10 +11,11 @@
 
     <item
         android:id="@+id/three"
-        android:title="Multiplayer x3"/>
+        android:title="First Line Lose"/>
 
     <item
         android:id="@+id/four"
-        android:title="Single x3"/>
+        android:title="Multiplayer x3 FLL "/>
+
 
 </menu>

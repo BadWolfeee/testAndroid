@@ -3,6 +3,7 @@ package pl.pollub.interfejs;
 import android.app.Activity;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -68,7 +69,10 @@ public class MainActivity extends Activity {
 
     }
     public void OnClick1(View view) {
+     //   Intent intent = new Intent(this, MapsActivity.class);
+     //   startActivity(intent);
         Intent intent = new Intent(this, MapsActivity.class);
+        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
         startActivity(intent);
     }
     public void OnClick2(View view) {

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.pollub.app2803.Game1x"
+    android:orientation="vertical"
+    android:background="@drawable/tapet2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="First to complete a line lose!"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r1k1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:background="#99f286dc"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r1k2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f08f85"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r1k3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f286dc"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        <Button
+            android:id="@+id/r2k1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f08f85"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r2k2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f286dc"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r2k3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f08f85"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r3k1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f286dc"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r3k2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f08f85"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/r3k3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:background="#99f286dc"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1Affffff"
+            android:id="@+id/back"
+            android:text="Back to menu"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:onClick="onBack"/>
+
+    </LinearLayout>
+
+</LinearLayout>

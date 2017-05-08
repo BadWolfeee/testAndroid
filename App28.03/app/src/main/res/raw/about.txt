@@ -1,2 +1,1 @@
-App made to test out this 3-Board Tic Tac Toe idea.
-
+App made to test out this 3-Board Tic Tac Toe idea. Playing regular tic tac toe, if you know how to play, you can't win nor can you lose. This app was made to firstly create multiplayer regulat tic tac toe game, then get a working AI named BearI, lastly set up a multiplayer for three board first line lose tic tac toe variation.

@@ -1,13 +1,14 @@
 package pl.pollub.app2803;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class Game extends Activity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,back;
     int turn;
     boolean win=false, dro=false;
     private GameLogics logics = new GameLogics();
@@ -25,6 +26,20 @@ public class Game extends Activity {
         b7=(Button)findViewById(R.id.r3k1);
         b8=(Button)findViewById(R.id.r3k2);
         b9=(Button)findViewById(R.id.r3k3);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Aquatico-Regular.otf");
+        b1.setTypeface(typeface);
+        b2.setTypeface(typeface);
+        b3.setTypeface(typeface);
+        b4.setTypeface(typeface);
+        b5.setTypeface(typeface);
+        b6.setTypeface(typeface);
+        b7.setTypeface(typeface);
+        b8.setTypeface(typeface);
+        b9.setTypeface(typeface);
+
+       back=(Button)findViewById(R.id.back);
+
         turn = 1;
 
         buttonSet(b1);
@@ -68,4 +83,8 @@ public class Game extends Activity {
             Toast.makeText(this, "It's a draw", Toast.LENGTH_LONG).show();
     }
 
+    public void onBack(View view) {
+
+        finish();
+    }
 }
