@@ -6,51 +6,61 @@
     android:layout_gravity="center_vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
-    tools:context="pl.pollub.gameinterface.MainActivity">
+    tools:context="pl.pollub.gameinterface.MainActivity"
+    android:background="@drawable/tapetalub">
 
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Quiz" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
     
     <Button
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:textSize="40dp"
-        android:text="Graj"
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="  Quiz"
+        android:textColor="#641E16"
+        android:background="#99ffffff"
         android:onClick="Q1"
         android:id="@+id/Q1"
         />
     
     <Button
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:textSize="40dp"
-        android:text="Opcje"
+        android:gravity="center|right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="Informacje  "
+        android:background="#9952BE80"
+        android:textColor="#641E16"
         android:onClick="Q2"
         android:id="@+id/Q2"/>
     
     <Button
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:textSize="40dp"
-        android:text="Statystyka"
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="  Mapa"
+        android:textColor="#641E16"
+        android:background="#99E74C3C"
         android:onClick="Q3"
         android:id="@+id/Q3"/>
 
     <Button
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:textSize="40dp"
+        android:layout_gravity="center|right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
         android:text="Wyjście"
+        android:textColor="#ffffff"
+        android:background="#992C3E50"
         android:onClick="Q4"
         android:id="@+id/Q4"/>
 
+</LinearLayout>
 </LinearLayout>

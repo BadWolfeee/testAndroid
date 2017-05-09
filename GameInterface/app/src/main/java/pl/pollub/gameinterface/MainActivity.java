@@ -32,6 +32,8 @@ public class MainActivity extends Activity {
 
 
     public void Q3(View view) {
+        Intent intent2 = new Intent(this, MapsActivity.class);
+        startActivity(intent2);
     }
 
     public void Q4(View view) {
