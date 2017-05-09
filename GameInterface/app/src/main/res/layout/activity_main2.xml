@@ -5,18 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="pl.pollub.gameinterface.Main2Activity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="bottom">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:layout_weight="1"
         android:id="@+id/tekst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:gravity="center"
-        android:text="TreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreśćTreść"/>
+        android:layout_gravity="center"
+        android:textColor="#27AE60"
+        android:text="TreśćTreśćTreśćTreśćTreśćTreśćTreść"/>
 
     <RadioGroup
+        android:paddingTop="30dp"
+        android:paddingBottom="50dp"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:id="@+id/gr1"
@@ -26,23 +35,32 @@
             android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#27AE60"
             android:text="ODPOWIEDZ1"/>
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#27AE60"
             android:text="ODPOWIEDZ2"/>
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#27AE60"
             android:text="ODPOWIEDZ3"/>
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#27AE60"
             android:text="ODPOWIEDZ4"/>
     </RadioGroup>
+    </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -50,9 +68,11 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/score"
         android:text="Score"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
         android:layout_weight="1"/>
 
     <Button
@@ -60,6 +80,10 @@
         android:layout_gravity="right"
         android:text="Następne"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onNext"/></LinearLayout>
+        android:layout_height="match_parent"
+        android:onClick="onNext"
+        android:textColor="#ffffff"
+        android:background="#99283747"
+        android:textSize="25sp"
+        android:layout_weight="1"/></LinearLayout>
 </LinearLayout>

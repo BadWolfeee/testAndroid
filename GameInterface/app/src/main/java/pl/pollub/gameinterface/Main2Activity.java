@@ -1,6 +1,8 @@
 package pl.pollub.gameinterface;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ public class Main2Activity extends Activity {
 
     private Questions mojeQuest= new Questions();
     private String myAns;
-    private int scor=0, sta=0;
+    private int scor=0, sta, fin=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,34 +33,103 @@ public class Main2Activity extends Activity {
 
         textView = (TextView) findViewById(R.id.tekst);
         sco = (TextView) findViewById(R.id.score);
-        sco.setText("Score: " + scor);
+        sco.setText("Wynik: " + scor);
         rg = (RadioGroup) findViewById(R.id.gr1);
+
+        sta=0;
+        Drawable back = getResources().getDrawable(R.drawable.tapetapytone);
+        setActivityBackground(back);
 
         updatePyt(sta);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(sta==0){
+                    Drawable back = getResources().getDrawable(R.drawable.tapetapyttwo);
+                    setActivityBackground(back);
+                }else if(sta==1){
+                    Drawable back = getResources().getDrawable(R.drawable.tapetapytthree);
+                    setActivityBackground(back);
+                }else if(sta==2){
+                    Drawable back = getResources().getDrawable(R.drawable.tapetapytfour);
+                    setActivityBackground(back);
+                }else if(sta==3){
+                    Drawable back = getResources().getDrawable(R.drawable.tapetapytfive);
+                    setActivityBackground(back);
+                }else if(sta==4){
+                    Drawable back = getResources().getDrawable(R.drawable.tapetainf);
+                    setActivityBackground(back);
+                }
                 // get selected radio button from radioGroup
                 int selectedId = rg.getCheckedRadioButtonId();
                 // find the radiobutton by returned id
                 but = (RadioButton) findViewById(selectedId);
 
-                if (sta<=5 && but.getText() == myAns) {
+                if(fin==1)
+                    finish();
+
+                if(!b1.isChecked() && !b2.isChecked() && !b3.isChecked() && !b4.isChecked()){
+                    sta++;
+                    if(sta<=4){
+                    updatePyt(sta);}
+
+                        if(sta>4) {
+                            if (scor == 0)
+                                textView.setText("Wynik końcowy to: " + scor + " punktów");
+                            else if (sta == 4 && scor == 1)
+                                textView.setText("Wynik końcowy to: " + scor + " punkt");
+                            else if (sta == 4 && scor > 1)
+                                textView.setText("Wynik końcowy to: " + scor + " punkty");
+                            b1.setVisibility(View.INVISIBLE);
+                            b2.setVisibility(View.INVISIBLE);
+                            b3.setVisibility(View.INVISIBLE);
+                            b4.setVisibility(View.INVISIBLE);
+                            next.setText("Wyjście");
+                            fin = 1;
+                        }
+                }
+                else if(sta<4 && but.getText() == myAns) {
                     scor++;
-                    sco.setText("Score: " + scor);
-                    updatePyt(sta++);
-                } else if(sta<=5) {
-                    sco.setText("Score: " + scor);
-                    updatePyt(sta++);
+                    sco.setText("Wynik: " + scor);
+                    Toast.makeText(Main2Activity.this,"Prawidłowa odpowiedź: "+myAns, Toast.LENGTH_SHORT).show();
+                    sta++;
+                    updatePyt(sta);
+
+                } else if(sta<4) {
+                    sco.setText("Wynik: " + scor);
+                    Toast.makeText(Main2Activity.this,"Prawidłowa odpowiedź: "+myAns, Toast.LENGTH_SHORT).show();
+                    sta++;
+                    updatePyt(sta);
+
                 } else{
-                    sta=0;
+                    Toast.makeText(Main2Activity.this,"Prawidłowa odpowiedź: "+myAns, Toast.LENGTH_SHORT).show();
+                    if(but.getText()==myAns)
+                        scor++;
+                    sco.setText("Wynik: " + scor);
+
+                    if(scor==0)
+                        textView.setText("Wynik końcowy to: " +scor+ " punktów");
+                    else if(scor==1)
+                        textView.setText("Wynik końcowy to: " +scor+ " punkt");
+                    else if(scor>1)
+                        textView.setText("Wynik końcowy to: " +scor+ " punkty");
+                    b1.setVisibility(View.INVISIBLE);
+                    b2.setVisibility(View.INVISIBLE);
+                    b3.setVisibility(View.INVISIBLE);
+                    b4.setVisibility(View.INVISIBLE);
+                    next.setText("Wyjście");
+                    fin=1;
                 }
 
-                Toast.makeText(Main2Activity.this, but.getText(), Toast.LENGTH_SHORT).show();
             }
-
         });
+    }
+
+    public void setActivityBackground(Drawable back) {
+        View view = this.getWindow().getDecorView();
+        view.setBackground(back);
     }
 
     private void updatePyt(int nr){
@@ -70,4 +141,5 @@ public class Main2Activity extends Activity {
 
         myAns = mojeQuest.getCorrAnsw(nr);
     }
+
 }
